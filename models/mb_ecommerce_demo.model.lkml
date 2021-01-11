@@ -1,4 +1,5 @@
 connection: "ecommerce_demo"
+label: "MB ecommerce_demo PLZ DON'T EDIT"
 
 # include all the views
 include: "/views/**/*.view"
