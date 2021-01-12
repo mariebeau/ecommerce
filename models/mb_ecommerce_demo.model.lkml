@@ -23,8 +23,6 @@ explore: events {
 
 explore: flights {}
 
-explore: imgsrc1onerroralert2 {}
-
 explore: inventory_items {
   join: products {
     type: left_outer
@@ -68,16 +66,6 @@ explore: orders {
 }
 
 explore: products {}
-
-explore: saralooker {
-  join: users {
-    type: left_outer
-    sql_on: ${saralooker.user_id} = ${users.id} ;;
-    relationship: many_to_one
-  }
-}
-
-explore: schema_migrations {}
 
 explore: user_data {
   join: users {
