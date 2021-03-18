@@ -79,6 +79,16 @@ view: users {
   measure: count {
     type: count
     drill_fields: [detail*]
+    #drill_fields: [city, count]
+    #link: {
+      #label: "Top 10 cities as column chart"
+      #url: "
+      #{% assign vis_config = '{
+      #\"type\": \"looker_column\",
+      #\"colors\": [\"#1A73E8\"]
+      #}' %}
+      #{{ link }}&vis_config={{ vis_config | encode_uri }}&toggle=dat,pik,vis&limit=10"
+    #}
   }
 
   # ----- Sets of fields for drilling ------
