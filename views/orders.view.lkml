@@ -6,6 +6,7 @@ view: orders {
     primary_key: yes
     label: "Order ID"
     type: number
+    value_format_name: id
     sql: ${TABLE}.id ;;
   }
 

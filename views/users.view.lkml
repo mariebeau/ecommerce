@@ -6,6 +6,7 @@ view: users {
     primary_key: yes
     label: "Customer ID"
     type: number
+    value_format_name: id
     sql: ${TABLE}.id ;;
   }
 
