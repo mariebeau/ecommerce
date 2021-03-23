@@ -4,6 +4,7 @@ view: orders {
 
   dimension: id {
     primary_key: yes
+    label: "Order ID"
     type: number
     sql: ${TABLE}.id ;;
   }
@@ -35,6 +36,6 @@ view: orders {
 
   measure: count {
     type: count
-    drill_fields: [id, users.last_name, users.id, users.first_name, order_items.count]
+    drill_fields: [id, users.last_name, users.id, order_items.count, products.category]
   }
 }
