@@ -3,8 +3,10 @@ view: order_items {
   drill_fields: [id]
 
   dimension: id {
+    label: "Order Item ID"
     primary_key: yes
     type: number
+    value_format_name: id
     sql: ${TABLE}.id ;;
   }
 

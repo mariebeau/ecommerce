@@ -3,8 +3,10 @@ view: inventory_items {
   drill_fields: [id]
 
   dimension: id {
+    label: "Inventory Item ID"
     primary_key: yes
     type: number
+    value_format_name: id
     sql: ${TABLE}.id ;;
   }
 
