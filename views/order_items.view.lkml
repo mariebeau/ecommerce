@@ -41,6 +41,7 @@ view: order_items {
 
   measure: count {
     type: count
+    label: "Items Count"
     drill_fields: [id, orders.id, inventory_items.id]
   }
 }
