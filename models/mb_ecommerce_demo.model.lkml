@@ -34,6 +34,7 @@ explore: inventory_items {
 }
 
 explore: order_items {
+  description: "Based on the individual items that comprise customer orders"
   join: orders {
     type: left_outer
     sql_on: ${order_items.order_id} = ${orders.id} ;;
