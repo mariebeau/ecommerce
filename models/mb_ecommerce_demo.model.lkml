@@ -4,6 +4,9 @@ label: "MB ecommerce_demo"
 # include all the views
 include: "/views/**/*.view"
 
+# include LookML dashboards
+include: "/Dashboards/*.dashboard.lookml"
+
 datagroup: mb_ecommerce_demo_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
