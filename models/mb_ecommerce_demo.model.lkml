@@ -1,8 +1,13 @@
 connection: "ecommerce_demo"
 label: "MB ecommerce_demo"
 
+#note
+
 # include all the views
 include: "/views/**/*.view"
+
+# include LookML dashboards
+include: "/Dashboards/*.dashboard.lookml"
 
 datagroup: mb_ecommerce_demo_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
@@ -10,10 +15,6 @@ datagroup: mb_ecommerce_demo_default_datagroup {
 }
 
 persist_with: mb_ecommerce_demo_default_datagroup
-
-explore: connection_reg_r3 {
-  label: "Another Explore"
-}
 
 explore: events {
   join: users {
