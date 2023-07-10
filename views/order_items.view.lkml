@@ -41,6 +41,11 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
 
+  parameter: date_selector {
+    type: date_time
+    description: "Use this field to select a date to filter results by."
+  }
+
   measure: count {
     type: count
     label: "Items Count"
