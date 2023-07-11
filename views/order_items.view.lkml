@@ -57,4 +57,10 @@ view: order_items {
     sql: ${sale_price} ;;
     value_format_name: usd
   }
+
+  measure: cumulative_total_revenue {
+    type: running_total
+    sql: ${total_sale_price} ;;
+    value_format_name: usd
+  }
 }
