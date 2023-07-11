@@ -50,6 +50,22 @@ view: inventory_items {
     sql: ${TABLE}.sold_at ;;
   }
 
+  parameter: number_of_results {
+    type: string
+    allowed_value: {
+      label: "Less than 500"
+      value: "< 500"
+    }
+    allowed_value: {
+      label: "Less than 10,000"
+      value: "< 10000"
+    }
+    allowed_value: {
+      label: "All Results"
+      value: "> 0"
+    }
+  }
+
   parameter: item_to_add_up {
     type: unquoted
     allowed_value: {
