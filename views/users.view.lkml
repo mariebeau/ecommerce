@@ -45,6 +45,16 @@ view: users {
     sql: ${age} ;;
   }
 
+  dimension: age_tier_c {
+    type: tier
+    label: "Age Tier (Classic)"
+    group_label: "Age tiers"
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70]
+    style: classic
+    value_format_name: decimal_0
+    sql: ${age} ;;
+  }
+
 
   dimension: city {
     type: string
