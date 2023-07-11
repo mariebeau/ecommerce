@@ -63,4 +63,18 @@ view: order_items {
     sql: ${total_sale_price} ;;
     value_format_name: usd
   }
+
+  measure: total_gross_margin {
+  hidden: yes
+  type: number
+  # this isn't actually gross margin, but we'll pretend it is for the screenshot.
+  sql:  ${total_sale_price} ;;
+  value_format_name: usd
+  }
+
+  measure: percent_of_total_gross_margin {
+    hidden: yes
+    type: percent_of_total
+    sql: ${total_gross_margin} ;;
+  }
 }
