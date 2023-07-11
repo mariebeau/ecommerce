@@ -70,6 +70,12 @@ view: orders {
     drill_fields: [id, users.last_name, users.id, order_items.count, products.category]
   }
 
+  measure: count_growth {
+    hidden: yes
+    type: percent_of_previous
+    sql: ${count} ;;
+  }
+
   measure: count_without_liquid {
     type: count
     hidden: yes
@@ -83,4 +89,5 @@ view: orders {
       url: "https://www.google.com/search?q={{ status._value }}"
     }
   }
+
 }
