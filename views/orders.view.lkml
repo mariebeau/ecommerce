@@ -69,4 +69,18 @@ view: orders {
     type: count
     drill_fields: [id, users.last_name, users.id, order_items.count, products.category]
   }
+
+  measure: count_without_liquid {
+    type: count
+    hidden: yes
+  }
+
+  measure: count_with_liquid {
+    type: count
+    hidden: yes
+    link: {
+      label: "Status Count"
+      url: "https://www.google.com/search?q={{ status._value }}"
+    }
+  }
 }
