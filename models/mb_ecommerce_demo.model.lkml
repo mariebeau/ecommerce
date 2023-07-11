@@ -80,3 +80,5 @@ explore: user_data {
 }
 
 explore: users {}
+
+explore: user_facts {}
