@@ -13,14 +13,28 @@ view: users {
   dimension: age {
     type: number
     sql: ${TABLE}.age ;;
+    value_format_name: decimal_0
   }
 
   dimension: age_tier {
     type: tier
+    label: "Age Tier (Integer)"
+    group_label: "Age tiers"
     tiers: [0, 10, 20, 30, 40, 50, 60, 70]
     style: integer
     sql: ${age} ;;
   }
+
+  dimension: age_tier_r {
+    type: tier
+    label: "Age Tier (Relational)"
+    group_label: "Age tiers"
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70]
+    style: relational
+    value_format_name: decimal_0
+    sql: ${age} ;;
+  }
+
 
   dimension: city {
     type: string
