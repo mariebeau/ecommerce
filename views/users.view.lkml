@@ -59,6 +59,10 @@ view: users {
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
+    link: {
+      label: "City Metrics Explore"
+      url: "/explore/mb_ecommerce_demo/order_items?fields=users.city,orders.count,users.count&f[users.city]=&sorts=orders.count+desc&limit=500"
+    }
   }
 
   dimension: country {
